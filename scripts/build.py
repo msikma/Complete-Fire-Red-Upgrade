@@ -41,7 +41,7 @@ def grit_loc():
 PREFIX = '/arm-none-eabi-'
 AS = (PATH + PREFIX + 'as')
 CC = (PATH + PREFIX + 'gcc')
-LD = (PATH + PREFIX + 'ld')
+LD = (PATH + PREFIX + 'gcc')
 GR = grit_loc()
 ARP = ('armips')
 OBJCOPY = (PATH + PREFIX + 'objcopy')
