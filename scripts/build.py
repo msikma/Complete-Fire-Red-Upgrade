@@ -13,11 +13,10 @@ from string import StringFileConverter
 
 def get_path():
 	if platform.system() == 'Windows':
-		return os.environ.get('Path')
-	return os.environ.get('PATH')
+		return os.environ.get('Path').split(';')
+	return os.environ.get('PATH').split(':')
 
-PathVar = get_path()
-Paths = PathVar.split(';')
+Paths = get_path()
 PATH = ""
 for candidatePath in Paths:
     if "devkitARM" in candidatePath:
