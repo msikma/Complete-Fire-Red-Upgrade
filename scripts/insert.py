@@ -6,14 +6,19 @@ import sys
 import shutil
 import binascii
 import textwrap
+import platform
 import sys
+from datetime import datetime
 
 OFFSET_TO_PUT = 0x900000
 SOURCE_ROM = "BPRE0.gba"
 
-from datetime import datetime
+def get_path():
+	if platform.system() == 'Windows':
+		return os.environ.get('Path')
+	return os.environ.get('PATH')
 
-PathVar = os.environ.get('Path')
+PathVar = get_path()
 Paths = PathVar.split(';')
 PATH = ""
 for candidatePath in Paths:

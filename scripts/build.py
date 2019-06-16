@@ -7,10 +7,16 @@ import itertools
 import hashlib
 import subprocess
 import sys
+import platform
 from datetime import datetime
 from string import StringFileConverter
 
-PathVar = os.environ.get('Path')
+def get_path():
+	if platform.system() == 'Windows':
+		return os.environ.get('Path')
+	return os.environ.get('PATH')
+
+PathVar = get_path()
 Paths = PathVar.split(';')
 PATH = ""
 for candidatePath in Paths:
