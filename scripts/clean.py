@@ -27,7 +27,7 @@ def PutFileNameInRightFormat(filename):
 		newFileName = STRINGS
 		
 	for i in range(1, len(filename)):
-		newFileName += "\\" + filename[i]
+		newFileName += "/" + filename[i]
 
 	return newFileName
 
@@ -51,7 +51,7 @@ if len(sys.argv) > 1:
 			try:
 				os.remove(newfilename)
 			except FileNotFoundError:
-				os.remove(BUILD + "\\IMG_" + newfilename.split('\\')[1])
+				os.remove(BUILD + "/IMG_" + newfilename.split('/')[1])
 			print('"Build for ' + sys.argv[2] + '" removed successfully!')
 			sys.exit(1)
 		except:
@@ -94,7 +94,7 @@ elif (len(sys.argv) > 1) and sys.argv[1].upper() == 'GRAPHICS':
 			if file.endswith('.h'):
 				os.remove(os.path.join(root, file))
 	
-	os.chdir(dir_path.split('\\scripts')[0])
+	os.chdir(dir_path.split('/scripts')[0])
 	os.chdir("build")
 	for root, dirs, files in os.walk(".", topdown = False):
 		for file in files:

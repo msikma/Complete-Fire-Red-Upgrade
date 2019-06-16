@@ -2,7 +2,7 @@
 .thumb
 .align 2
 
-.include "..\\defines"
+.include "../defines"
 
 .global MultiInitPokemonOrderHook
 .global MultiEnemyPokeballReadoutHook
@@ -136,4 +136,3 @@ PartnerSetupHook:
         bx r0
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-

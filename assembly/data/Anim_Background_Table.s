@@ -3,8 +3,8 @@
 .align 2
 .global AnimationBackgroundTable
 
-.include "..\\Anim_Defines.asm"
-.include "assembly\\data\\Anim_Backgrounds_Graphics_Defines.s"
+.include "../Anim_Defines.asm"
+.include "assembly/data/Anim_Backgrounds_Graphics_Defines.s"
 
 AnimationBackgroundTable:
 .word 0x8d1c9bc, 0x8d1cfb4, 0x8d1cfd4		@BG_DARK_2
@@ -78,4 +78,3 @@ AnimationBackgroundTable:
 .word BG_MALICIOUS_MOONSAULT_IMG, BG_MALICIOUS_MOONSAULT_PAL, BG_MALICIOUS_MOONSAULT_RAW		@BG_MALICIOUS_MOONSAULT = 0x44
 .word BG_CLANGOROUS_SOULBLAZE_IMG, BG_CLANGOROUS_SOULBLAZE_PAL, BG_CLANGOROUS_SOULBLAZE_RAW		@BG_CLANGOROUS_SOULBLAZE = 0x45
 .word BG_SNUGGLE_FOREVER_IMG, BG_SNUGGLE_FOREVER_PAL, BG_SNUGGLE_FOREVER_RAW		@ BG_SNUGGLE_FOREVER = 0x46
-

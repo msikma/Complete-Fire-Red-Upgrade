@@ -2,7 +2,7 @@
 .global gTypeEffectiveness
 .global gMoveMenuInfoIcons
 
-.include "..\\defines"
+.include "../defines"
 
 .equ TYPE_MUL_NO_EFFECT, 0
 .equ TYPE_MUL_NOT_EFFECTIVE, 5
@@ -14,10 +14,10 @@
 
 @;format: attacking type, defending type, damage multiplier
 @;the multiplier is a (decimal) fixed-point number:
-@×2.0 TYPE_MUL_SUPER_EFFECTIVE
-@×1.0 TYPE_MUL_NORMAL
-@;×0.5 TYPE_MUL_NOT_EFFECTIVE
-@;×0.0 TYPE_MUL_NO_EFFECT
+@ï¿½2.0 TYPE_MUL_SUPER_EFFECTIVE
+@ï¿½1.0 TYPE_MUL_NORMAL
+@;ï¿½0.5 TYPE_MUL_NOT_EFFECTIVE
+@;ï¿½0.0 TYPE_MUL_NO_EFFECT
 
 gTypeEffectiveness:
 .byte TYPE_NORMAL, TYPE_ROCK, TYPE_MUL_NOT_EFFECTIVE
@@ -195,4 +195,3 @@ typeicon 42, 12, 0xE8       @ -Effect- icon
 typeicon 32, 12, 0x100      @ Fairy icon
 typeicon  8,  8, 0xAE       @ Unused (Small white pokeball)
 typeicon  8,  8, 0xAF       @ Unused (Small dark pokeball)
-

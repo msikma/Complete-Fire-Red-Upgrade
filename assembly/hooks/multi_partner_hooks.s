@@ -2,7 +2,7 @@
 .thumb
 .align 2
 
-.include "..\\defines"
+.include "../defines"
 
 .global DisplayPartnerNameInPartyMenuHook
 .global TagTeamBackspritePalHook
@@ -113,5 +113,3 @@ TagTeamThrowPokeballHook:
 	bl IsMultiBattle
 	ldr r1, =0x80336A8 | 1
 	bx r1
-	
-	

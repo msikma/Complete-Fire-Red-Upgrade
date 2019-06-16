@@ -8,6 +8,7 @@ import hashlib
 import subprocess
 import sys
 import platform
+from shutil import which
 from datetime import datetime
 from string import StringFileConverter
 
@@ -31,11 +32,17 @@ if PATH == "":
 	else:
 		print("Devkit found.")
 
+def grit_loc():
+	loc = which('grit')
+	if not loc:
+		return 'deps/grit.exe'
+	else: return loc
+
 PREFIX = '/arm-none-eabi-'
 AS = (PATH + PREFIX + 'as')
 CC = (PATH + PREFIX + 'gcc')
 LD = (PATH + PREFIX + 'ld')
-GR = ("deps/grit.exe")
+GR = grit_loc()
 ARP = ('armips')
 OBJCOPY = (PATH + PREFIX + 'objcopy')
 SRC = './src'
@@ -157,9 +164,9 @@ def process_image(in_file):
 	else:
 		out_file = in_file.split('.png')[0] + '.s'
 	
-	namelist = in_file.split("\\") #Get path of grit flags
+	namelist = in_file.split("/") #Get path of grit flags
 	namelist.pop(len(namelist) - 1)
-	flags = "".join(str(i) + "\\" for i in namelist)
+	flags = "".join(str(i) + "/" for i in namelist)
 	flags += "gritflags.txt"
 	
 	try:
@@ -178,7 +185,6 @@ def process_image(in_file):
 			return new_out_file
 		else:
 			run_command(cmd)
-	
 	except FileNotFoundError:
 		run_command(cmd) #No .o file has been created
 

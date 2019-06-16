@@ -2,8 +2,8 @@
 .text
 .align 2
 
-.include "..\\Anim_Defines.asm"
-/*.include "..\\asm_defines.s" Don't Uncomment This!*/
+.include "../Anim_Defines.asm"
+/*.include "../asm_defines.s" Don't Uncomment This!*/
 
 .global gBattleAnims_General	
 
@@ -827,4 +827,3 @@ ANIM_REMOVE_ABILITY_POP_UP:
 	launchtask AnimTask_DestroyAbilityPopUp 0x5 0x0
 	pause 0x20
 	endanimation
-	
