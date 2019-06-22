@@ -14,10 +14,10 @@
 
 @;format: attacking type, defending type, damage multiplier
 @;the multiplier is a (decimal) fixed-point number:
-@�2.0 TYPE_MUL_SUPER_EFFECTIVE
-@�1.0 TYPE_MUL_NORMAL
-@;�0.5 TYPE_MUL_NOT_EFFECTIVE
-@;�0.0 TYPE_MUL_NO_EFFECT
+@×2.0 TYPE_MUL_SUPER_EFFECTIVE
+@×1.0 TYPE_MUL_NORMAL
+@;×0.5 TYPE_MUL_NOT_EFFECTIVE
+@;×0.0 TYPE_MUL_NO_EFFECT
 
 gTypeEffectiveness:
 .byte TYPE_NORMAL, TYPE_ROCK, TYPE_MUL_NOT_EFFECTIVE
